@@ -374,9 +374,7 @@ void intro()
     cout << "\n\n\n\t  BANK";
     cout << "\n\n\tMANAGEMENT";
     cout << "\n\n\t  SYSTEM";
-    cout << "\n\n\n\nMADE BY :Padmashree Jha";
-    cout << "\n\nEMAIL : padmashreejha717@gmail.com";
-    cout << "\n\nDiscord ID : padmashree jha#7045";
+    cout << "\n\n\n\nMADE BY :Suhas Venkata,Suhas mirjikar";
     cin.get();
 }
 
