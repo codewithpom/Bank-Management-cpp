@@ -33,18 +33,27 @@ public:
 
 void account::create_account()
 {
-    cout << "\nEnter The account No. :";
+    cout << "\nEnter The account No. (8 digits): ";
     cin >> acno;
+
+    // Check if the account number is exactly eight digits
+    if (cin.fail() || to_string(acno).length() != 8) {
+        cout << "\nInvalid account number format. Please enter an 8-digit account number.";
+        return; // Exit the function if the account number is invalid
+    }
+
+    // Rest of the account creation process
     cout << "\n\nEnter The Name of The account Holder : ";
     cin.ignore();
     cin.getline(name, 50);
     cout << "\nEnter Type of The account (C/S) : ";
     cin >> type;
     type = toupper(type);
-    cout << "\nEnter The Initial amount(>=500 for Saving and >=1000 for current ) : ";
+    cout << "\nEnter The Initial amount(>=500 for Saving and >=1000 for current) : ";
     cin >> deposit;
     cout << "\n\n\nAccount Created..";
 }
+
 
 void account::show_account() const
 {
@@ -374,9 +383,7 @@ void intro()
     cout << "\n\n\n\t  BANK";
     cout << "\n\n\tMANAGEMENT";
     cout << "\n\n\t  SYSTEM";
-    cout << "\n\n\n\nMADE BY :Padmashree Jha";
-    cout << "\n\nEMAIL : padmashreejha717@gmail.com";
-    cout << "\n\nDiscord ID : padmashree jha#7045";
+    cout << "\n\n\n\nMADE BY :Suhas Venkata,Suhas mirjikar";
     cin.get();
 }
 
